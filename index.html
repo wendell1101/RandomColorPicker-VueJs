@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Picker</title>
+    <script src="https://unpkg.com/vue@next"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <style>
+        body{
+            background:#eee;
+        }
+        .box {
+            padding: 150px 0;
+            width: 100%;
+            text-align: center;
+            background: #ddd;
+            cursor: pointer;
+            display: inline-block;
+        }
+
+        .mini-color {
+            border: 1px solid black;
+            width: 50px;
+            height: 50px;
+        }
+        .text{
+            font-weight: bold;
+        }
+        p{
+            text-align: left;
+        }
+        
+        
+    </style>
+</head>
+
+<body>
+    <header class="bg-success p-3">
+        <div class="container">
+            <h2 class="text-light">RANDOM COLOR PICKER</h2>
+        </div>
+    </header>
+    <div class="container">
+        <div class="row justify-content-center mt-5">
+            <div class="col-md-6" id="app">
+                <div class="col-12 mb-5">
+                    <h4 class="text-center">Move the mouse inside the box and double click to choose color</h4>
+                </div>
+                <div class="box shadow mb-3 text-secondary" id="color-box" @mousemove="pickColor">Color Picker</div>
+                             
+                <div class="row text-center mt-4 justify-content-space-between align-items-between">
+                    <div class="col">
+                        <p>RGB color: <span id="rgb" class="text"> rgb(0,0,0)</span> </p>
+                        <p>Hexadecimal: <span id="hex" class="text"> #fff</span></p>
+                    </div>
+                    <div class="col">
+                        <button class="mini-color"></button>
+                    </div>
+                </div>
+            
+            </div>
+        </div>
+       
+    </div>
+    <footer class="text-center text-success  p-2">Copyright &copy; 2020 - Suazo, Wendell</footer>
+   
+        
+        
+    
+
+    <script src="main.js"></script>
+
+</body>
+
+</html>
