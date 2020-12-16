@@ -62,11 +62,11 @@ const app = Vue.createApp({
             return hex.length == 1 ? "0" + hex : hex;
         },
 
-        // function to show color in mini box in the dom
+        // method to show color in mini box in the dom
         showBgColor() {
             document.querySelector('.mini-color').style.background = `${this.hexadecimal}`;
         },
-        // copy 
+        // copy rgb
         copyRgb() {
             /* Get the text field */
             let copyText = document.getElementById("rgb");
@@ -81,7 +81,7 @@ const app = Vue.createApp({
             /* Alert the copied text */
             alert("Copied color: " + copyText.value);
         },
-        // copy 
+        // copy hex
         copyHex() {
             /* Get the text field */
             let copyText = document.getElementById("hex");

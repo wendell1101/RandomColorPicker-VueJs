@@ -27,3 +27,8 @@ p{
     justify-content: space-around;
     align-items: center
 }
+.fab{
+    color:#eee
+    font-size:1.4rem;
+    margin-right:5px;
+}
