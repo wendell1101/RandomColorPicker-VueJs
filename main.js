@@ -36,6 +36,7 @@ const app = Vue.createApp ({
             let rgb = document.getElementById('rgb');
             let hexadecimal = document.getElementById('hex');
 
+            // select color using dblclick
             e.target.addEventListener('dblclick', (e) => {
                 // remove mousemove event listener
                 this.hasColor = true;
