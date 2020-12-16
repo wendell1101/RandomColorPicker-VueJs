@@ -13,8 +13,9 @@
 
 <body>
     <header class="bg-success p-3">
-        <div class="container">
+        <div class="container d-flex justify-content-space-between">
             <h2 class="text-light">RANDOM COLOR PICKER</h2>
+            <img src="profile.jpg" alt="profile" class="rounded-circle ml-auto" style="width:50px">
         </div>
     </header>
     <div class="container">
@@ -26,11 +27,27 @@
                 <div class="box shadow mb-3 text-secondary" id="color-box" @mousemove="pickColor">Color Picker</div>
                              
                 <div class="row text-center mt-4 justify-content-space-between align-items-between">
-                    <div class="col">
-                        <p>RGB color: <span id="rgb" class="text"> rgb(0,0,0)</span> </p>
-                        <p>Hexadecimal: <span id="hex" class="text"> #fff</span></p>
+                    <div class="col-md-8">
+                        <div class="d-flex justify-content-space-between">
+                            <div class="form-group d-flex align-items-center">
+                                <label for="rgb">RGB:</label>
+                                <input type="text" value="rgb(0,0,0)" id="rgb" class="form-control-md">
+                            </div>
+                            <button class="btn bg-success text-white btn-sm" @click="copyRgb">Copy</button>
+                        </div>
+                        <div class="d-flex justify-content-space-between">
+                            <div class="form-group d-flex align-items-center">
+                                <label for="rgb">Hexadecimal:</label>
+                                <input type="text" value="#fff" id="hex" class="form-control-md">
+                            </div>
+                            <button class="btn bg-success text-white btn-sm" @click="copyHex">Copy</button>
+                        </div>
+
+                        
+                      
+                        
                     </div>
-                    <div class="col">
+                    <div class="col-md-4">
                         <button class="mini-color"></button>
                     </div>
                 </div>
