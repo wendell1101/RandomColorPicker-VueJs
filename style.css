@@ -1,5 +1,6 @@
 body{
     background:#eee;
+    overflow-x: hidden;
 }
 .box {
     padding: 150px 0;
